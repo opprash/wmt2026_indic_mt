@@ -785,17 +785,5 @@
   },
   "targin_train_add": {
     "file_name": "targin_add.json"
-  },
-  "hate_class": {
-    "file_name": "train_class_hate_final_fusai.json"
-  },
-  "need_predict1": {
-    "file_name": "predict_ccl_class_final_explain_test2_label_know_all_data_final_version.json"
-	        },
-  "ccl_pretrain": {
-    "file_name":"pretrain_all.json",
-    "columns": {
-	  "prompt": "text"
-	}
   }
 }
