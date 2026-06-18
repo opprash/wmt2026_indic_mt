@@ -673,27 +673,6 @@
   "rag_step_one": {
     "file_name": "sft/rag_step_one.json"
   },
-  "ccl": {
-    "file_name": "qwen_increase_train_know_keywords.json"
-  },
-  "ccl_qwen": {
-    "file_name": "qwen_increase_without_train_add_train.json"
-  },
-  "ccl_final": {
-    "file_name": "train_know_final_agument.json"
-  },
-  "ccl_class": {
-    "file_name": "train_class_increase_input_dirty_word_final_explain_qwen_all.json"
-  },
-  "ccl_class_fs": {
-    "file_name": "train_qwen_merge_only_train_fs_choice_4k_label_know_all_data_final_version.json"
-  },
-  "caizhengju_train": {
-    "file_name": "czj_sft.json"
-  },
-  "ccl_class_generate": {
-    "file_name": "train_class_increase_input_dirty_word_final_explain_qwen_all_add_no_generate.json"
-  },
   "targin_train1": {
     "file_name": "targin_train.json"
   },
