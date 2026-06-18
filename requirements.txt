@@ -1,0 +1,23 @@
+# ---- Step 1: vocabulary building & data prep ----
+pandas
+openpyxl
+requests          # DashScope (qwen3-max) word-level alignment
+
+# ---- Step 4/5: evaluation & submission post-processing ----
+sacrebleu>=2.6.0
+indic-nlp-library  # provides `indicnlp` (Indic tokenizers; Bodo take-shorter + decode_fix)
+nltk               # METEOR (needs: python -m nltk.downloader wordnet omw-1.4 punkt)
+rouge-score
+
+# ---- Step 3: model prediction ----
+# predict_final_test.py (vLLM) needs:  vllm, torch, transformers, tqdm
+# predict_llamafactory.yaml runs inside LLaMA-Factory (llamafactory-cli).
+vllm
+torch
+transformers
+tqdm
+
+# ---- Notes ----
+# Training (Step 2) is run via LLaMA-Factory, installed separately:
+#   https://github.com/hiyouga/LLaMA-Factory   (+ deepspeed, flash-attn)
+# Base models (public): Qwen/Qwen2.5-32B-Instruct, tencent/Hunyuan-MT-7B.

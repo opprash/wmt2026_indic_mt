@@ -1,0 +1,36 @@
+### model
+model_name_or_path: /base/rd1/large_models/train_save/full/wmt_total/hy_bodo/3e-5
+trust_remote_code: true
+flash_attn: fa2
+
+### method
+stage: dpo
+do_train: true
+finetuning_type: full
+pref_beta: 0.1
+pref_loss: sigmoid
+deepspeed: examples/deepspeed/ds_z3_config.json
+
+### dataset
+dataset: bodo_train_dpo
+template: hunyuan
+cutoff_len: 512
+overwrite_cache: true
+preprocessing_num_workers: 16
+
+### output
+output_dir: /base/rd1/large_models/train_save/full/dpo/dpo_bodo
+logging_steps: 10
+save_steps: 50000
+plot_loss: true
+overwrite_output_dir: true
+
+### train
+per_device_train_batch_size: 2
+gradient_accumulation_steps: 8
+learning_rate: 5.0e-6
+num_train_epochs: 4.0
+lr_scheduler_type: cosine
+warmup_ratio: 0.1
+bf16: true
+ddp_timeout: 180000000

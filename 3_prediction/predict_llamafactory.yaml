@@ -1,0 +1,53 @@
+#model_name_or_path: /base/rd1/large_models/train_save/full/wmt_total/hy_bodo/3e-5 # sft bodo
+#model_name_or_path: /base/rd1/large_models/train_save/full/wmt_total/hy_bodo_add/3e-5 # sft_add bodo
+#model_name_or_path: /base/rd1/large_models/train_save/full/dpo/dpo_bodo # dpo bodo
+#
+#
+#model_name_or_path: /base/rd1/large_models/train_save/full/wmt_total/hy_kokborok/3e-5 # sft kokborok
+#model_name_or_path: /base/rd1/large_models/train_save/full/wmt_total/hy_kokborok_add/3e-5 # sft_add kokborok
+#model_name_or_path: /base/rd1/large_models/train_save/full/dpo/dpo_kokborok # dpo kokborok
+
+
+model_name_or_path: /base/rd1/large_models/train_save/full/test_hybd
+
+
+
+
+
+#adapter_name_or_path: /base/rd1/large_models/train_save/lora/wmt/bodo
+#adapter_name_or_path: /base/rd1/large_models/train_save/lora/dpo/targin
+#adapter_name_or_path: /base/rd1/large_models/train_save/lora/dpo/sft_targin #/base/rd1/large_models/train_save/lora/wmt/targin
+#trust_remote_code: true
+#
+#### method
+stage: sft
+do_predict: true
+finetuning_type: full
+##deepspeed: examples/deepspeed/ds_z3_config.json  # choices: [ds_z0_config.json, ds_z2_config.json, ds_z3_config.json]
+#
+#### dataset
+eval_dataset: gold_sft_bodo
+#eval_dataset: gold_sft_add_bodo
+#eval_dataset: gold_sft_kokborok
+#eval_dataset: gold_sft_add_kokborok
+template: hunyuan
+cutoff_len: 512
+overwrite_cache: true
+preprocessing_num_workers: 16
+#
+#
+#output_dir: /base/rd1/hunyun_eval/bodo/sft
+#output_dir: /base/rd1/hunyun_eval/bodo/sft_add
+#output_dir: /base/rd1/hunyun_eval/bodo/sft_dpo
+#output_dir: /base/rd1/hunyun_eval/kokborok/sft
+#output_dir: /base/rd1/hunyun_eval/kokborok/sft_add
+#output_dir: /base/rd1/hunyun_eval/kokborok/sft_dpo
+output_dir: /base/rd1/hunyun_eval/bodo/sft_test
+overwrite_output_dir: true
+#
+#### eval
+do_sample: false
+repetition_penalty: 1.2
+per_device_eval_batch_size: 64
+predict_with_generate: true
+
