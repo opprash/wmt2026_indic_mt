@@ -158,8 +158,8 @@ The final submission plan (see `5_final_submission/submission_plan.py`):
 - **Base models** must be obtained separately (publicly available):
   `Qwen/Qwen2.5-32B-Instruct`, `tencent/Hunyuan-MT-7B`.
 
----
 
-## Code repository
 
-`<GIT_REPOSITORY_URL_PLACEHOLDER>`  *(to be filled in after the repo is pushed)*
+
+
+
