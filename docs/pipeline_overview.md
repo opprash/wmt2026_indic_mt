@@ -1,6 +1,6 @@
 # Pipeline overview & experiment matrix
 
-## Experiment matrix (8 training experiments)
+## Experiment matrix (7 training experiments + 1 post-hoc ensemble)
 
 | ID | Base model | Data | Stage | Tuning |
 |----|------------|------|-------|--------|
@@ -25,14 +25,14 @@ public data), none qualifies as a constrained primary; therefore we submit
 
 | Language | contrastive1 | contrastive2 |
 |----------|--------------|--------------|
-| Bodo (en_to_bodo) | take-shorter merge + decode_fix | sft_test |
+| Bodo (en_to_bodo) | take-shorter merge + decode_fix | sft (baseline) |
 | Kokborok (en_to_trp) | sft_add | sft (baseline) |
 | Karbi (en_to_mjw) | sft_add | sft (baseline) |
 | Nagamese (en_to_nag) | sft_add | sft (baseline) |
 | Tagin (en_to_tgj) | sft_add | sft (baseline) |
 
 File naming: `星辰之力_contrastive1_en_to_<code>.txt`,
-`星辰之力_contrastive2_en_to_<code>.txt`.[targin_predicted.json](../5_final_submission/sft_add_predictions/targin_predicted.json)
+`星辰之力_contrastive2_en_to_<code>.txt`.
 
 ## Key findings
 
@@ -44,4 +44,4 @@ File naming: `星辰之力_contrastive1_en_to_<code>.txt`,
 - **Data augmentation is language-dependent**: `sft_add` helps Kokborok
   (+6.67 BLEU) but regresses Bodo — augment per language, not uniformly.
 - **Custom vocabulary injection** gives net gains (Tagin 8:2 pre-experiment:
-  +7.09 BLEU, +5.97 ChrF, −51.56 TER).
+  +7.09 BLEU, +7.71 ChrF, −49.35 TER).
