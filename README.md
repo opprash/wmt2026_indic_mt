@@ -92,7 +92,7 @@ Each numbered directory has its own `README.md` with detailed usage.
 
 Each pipeline additionally has an **`_add`** variant trained on official + external
 public corpus. The final submitted systems are Hunyuan-MT-7B full-parameter
-variants (`sft`, `sft_add`, `sft→DPO`) plus the Bodo **take-shorter-merge +
+variants (`sft`, `sft_add`) plus the Bodo **take-shorter-merge +
 decode_fix** ensemble.
 
 ---
