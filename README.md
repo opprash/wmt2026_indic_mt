@@ -1,4 +1,4 @@
-# WMT26 Indic-MT — Team 星辰之力 (Star Power) System Code
+# WMT26 Indic-MT — Team 星辰之力 System Code
 
 Reproducible code for our submission to the **WMT26 Low-Resource Indic Languages
 Machine Translation Shared Task (Category 2)**, covering five English→X directions:
