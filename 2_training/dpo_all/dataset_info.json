@@ -643,36 +643,6 @@
     },
     "folder": "python"
   },
-  "cot_step_one": {
-    "file_name": "sft/cot_step_one.json"
-  },
-  "extract_step_one": {
-    "file_name": "sft/extract_step_one.json"
-  },
-  "keyword_step_one": {
-    "file_name": "sft/keyword_step_one.json"
-  },
-  "multiturn_rewrite_step_one": {
-    "file_name": "sft/multiturn_rewrite_step_one.json"
-  },
-  "qa_bianhao_doc": {
-    "file_name": "sft/qa_bianhao_doc.json"
-  },
-  "qa_gen": {
-    "file_name": "sft/qa_gen.json"
-  },
-  "qa_rag_sft": {
-    "file_name": "sft/qa_rag_sft.json"
-  },
-  "qa_single_doc": {
-    "file_name": "sft/qa_single_doc.json"
-  },
-  "qa_xiangguan_doc": {
-    "file_name": "sft/qa_xiangguan_doc.json"
-  },
-  "rag_step_one": {
-    "file_name": "sft/rag_step_one.json"
-  },
   "targin_train1": {
     "file_name": "targin_train.json"
   },
